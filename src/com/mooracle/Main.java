@@ -13,7 +13,13 @@ import java.util.List;
  * in ingrtidients list. Then if we found eggs in it we break out of the loop and tells the bad news. Watch how many
  * variables needed to store the STATE of the variables.
  *
+ * In a more declarative manner we can modify the codes using List method contains and ask it in if statement whether it
+ * is true or false if the ingrdients indeed contains eggs.
  *
+ * Contains method in the List object is already being around in the collectible classes. However, this process approach
+ * is more declarative. We just declare what we want and the detail of the process has been encapsulated in the back.
+ * This can be optimized further for it. The main advantage of a declarative coding style is it was more straightforward
+ * thus easier to understand by other people who read the code.
  * */
 
 public class Main {
@@ -29,18 +35,18 @@ public class Main {
                 "milk"
         );
 
-        boolean hasEggs = false;
+//        boolean hasEggs = false;
+//
+//        for(String ingridient:ingridieants){
+//
+//            if(ingridient.equals("eggs")){
+//                hasEggs=true;
+//                break;
+//            }
+//
+//        }
 
-        for(String ingridient:ingridieants){
-
-            if(ingridient.equals("eggs")){
-                hasEggs=true;
-                break;
-            }
-
-        }
-
-        if(hasEggs){
+        if(ingridieants.contains("eggs")){
             System.out.println("Sorry, eggs!");
         }
     }
