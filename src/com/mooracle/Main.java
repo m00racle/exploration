@@ -8,6 +8,12 @@ import java.util.List;
  * Here we want to test whether inside a List of ingridients there are "eggs" in it.
  *
  * If there is egg just stop iteration and spread the bad news!
+ *
+ * If we use imperative code stytle it has longer steps. First we List all ingridients, then we iterate all ingridient
+ * in ingrtidients list. Then if we found eggs in it we break out of the loop and tells the bad news. Watch how many
+ * variables needed to store the STATE of the variables.
+ *
+ *
  * */
 
 public class Main {
