@@ -33,6 +33,8 @@ import java.util.function.Consumer;
  * Basically the forEach method use what is called Consumer which is a functional interface (can be used as the target
  * for a lambda). Consumer represent an operation that accepts a single input argment and return no result. It just do
  * what in the middle of the @Override code ask it to do.
+ *
+ * Yes the code is still long and still has the long similar to manual for loop and print each loop String.
  * */
 
 public class Main {
