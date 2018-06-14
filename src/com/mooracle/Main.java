@@ -2,6 +2,8 @@ package com.mooracle;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+
 /** Entry 1:
  * We start with giving exmple on the difference between declarative and imperative programing style.
  *
@@ -20,13 +22,24 @@ import java.util.List;
  * is more declarative. We just declare what we want and the detail of the process has been encapsulated in the back.
  * This can be optimized further for it. The main advantage of a declarative coding style is it was more straightforward
  * thus easier to understand by other people who read the code.
+ *
+ * Entry 3: A More Functional Loop:
+ * we now want to print out each ingridients in the (Collection) List ingridients. We can use the old code this is how
+ * we do it imperatively first.
+ *
+ * Now for all iterable object there is a new method called for each. Thus ingridients also has one since ingridients is
+ * also iterable as it is a List. But this method is a new method available only in  1.8 forward
+ *
+ * Basically the forEach method use what is called Consumer which is a functional interface (can be used as the target
+ * for a lambda). Consumer represent an operation that accepts a single input argment and return no result. It just do
+ * what in the middle of the @Override code ask it to do.
  * */
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        List<String> ingridieants = Arrays.asList(
+        List<String> ingredients = Arrays.asList(
                 "flour",
                 "salt",
                 "baking powder",
@@ -35,19 +48,23 @@ public class Main {
                 "milk"
         );
 
-//        boolean hasEggs = false;
+        // entry 3: we will reuse modified version of the old code (imperative)
+
+//        for(String ingridient:ingredients){
 //
-//        for(String ingridient:ingridieants){
+//            // entry 3: print it all imperatively!!
 //
-//            if(ingridient.equals("eggs")){
-//                hasEggs=true;
-//                break;
-//            }
+//            System.out.println(ingridient);
 //
 //        }
 
-        if(ingridieants.contains("eggs")){
-            System.out.println("Sorry, eggs!");
-        }
+        // entry 3; using forEach method (declarative):
+
+        ingredients.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.println(s);// <- accept each String from ingredients list and print it
+            }
+        });//<- link on the README or CTRL - Q after highlighting the code forEach
     }
 }
