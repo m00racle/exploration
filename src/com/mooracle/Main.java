@@ -69,12 +69,35 @@ import java.util.function.Consumer;
  * Summary: Basically we just defining Consumer object (which is the only function expected by List.forEach method to
  * pass. Thus the lambda we write as only a one liner object will be treated as Consumer. Java will trust us to take
  * care the checking of the object passed into that lambda.
+ *
+ * Entry 5: Method Reference
+ * in this case we can just referring to the instance method (println) in the static out instance object of System.
+ * Because the signature is the same as the lambda for example the System will know what exactly it wanted to do.
+ *
+ * To clear things out let's just create a new static method inside Main class. Note that yell method is static but
+ * println is an instance method of the out static method from the System class. More on this static vs instance method
+ * in the README.
+ *
+ * As long as a method or lambda function matches the expected signature, you can use it as an argument.
+ * These signatures are called function shapes. In this case the forEach method is looking for a function that accepts
+ * a string and returns nothing (see the @Override accept method from Entry 3). This is the signature of Consumer func
+ * This time we just accept string and print it out. The signature of the println method is also the same as
+ * Consumer function it accept string and returns nothing just print it out. Thus we can just use it to pass ingredients
+ * into println method, which is called method reference than can replace the lambda from Entry 4!
  * */
 
 public class Main {
 
+    // entry 5: make a new static method:
+
+    public static void yell(String words){
+        System.out.printf("%s!!!!!! %n", words.toUpperCase());
+    }
+
     public static void main(String[] args) {
-	// write your code here
+
+        // write your code here
+
         List<String> ingredients = Arrays.asList(
                 "flour",
                 "salt",
@@ -120,7 +143,19 @@ public class Main {
         /* ingredients.forEach(ingredient -> System.out.println(ingredient));*/
 
         // entry 4: proof of Anonymous function
-        Consumer<String> printer = resep -> System.out.println(resep);
-        ingredients.forEach(printer);
+        /*Consumer<String> printer = resep -> System.out.println(resep);
+        ingredients.forEach(printer);*/
+
+        // entry 5: using method reference:
+
+        /*ingredients.forEach(System.out::println);*/
+
+        // entry 5: test the static method yell in the main class:
+
+        /*Main.yell("yahoo");*/
+
+        // entry 5: try out the static method yell into yelling the ingredients using method reference:
+
+        ingredients.forEach(Main::yell);
     }
 }

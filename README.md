@@ -18,9 +18,13 @@ NOTE: YOU CAN ALWAYS USE CTRL - Q to find out more on highlighted code.
     with the [definition of Consumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html).
     A functional interface is an interface with exactly 1 abstract method.
 2. Entry 4: Lambda [course](https://teamtreehouse.com/library/lambdas)
+3. Entry 5: Method Reference
+    1. [static method vs instance method](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/)
+
     
 ## Parking Lot of this Course
 Here is some terms that hasn't fully explained:
 1. Pure
 2. Side Effects
 3. Higher Order Function
+4. Method Reference Inference
