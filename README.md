@@ -20,6 +20,9 @@ NOTE: YOU CAN ALWAYS USE CTRL - Q to find out more on highlighted code.
 2. Entry 4: Lambda [course](https://teamtreehouse.com/library/lambdas)
 3. Entry 5: Method Reference
     1. [static method vs instance method](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/)
+4. Entry 6: Function Shapes
+    1. [java.util.function package](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
+    
 
     
 ## Parking Lot of this Course
@@ -28,3 +31,4 @@ Here is some terms that hasn't fully explained:
 2. Side Effects
 3. Higher Order Function
 4. Method Reference Inference
+5. Lazy
