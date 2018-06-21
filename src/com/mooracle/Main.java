@@ -119,6 +119,44 @@ import java.util.function.Consumer;
  * parameter. One of the most obvious is Object.requireNonNull(T obj, Supplier) which will create (Supply) a message if
  * the requireNonNull invokes NullPointerException. This method is introduced since Java 8 (1.8) Thus we can use it into
  * our code to ensure that the word coming into yell method is non null.
+ *
+ * Entry 7: [Function Shapes - Function and Predicate]
+ *
+ * Next we talk about function as the root of the java.util.function package which accepts one argument and produce a
+ * result. This function Functional interface (a bit weird to say it) but please keep in mind this functional interface
+ * named Function. Just like Map the Fucntion has < T, R > which means we need to specify the Type of the input (T) and
+ * the type of the Result (R) inside the tag brace.
+ *
+ * The single abstract method in this interface is the apply(T t) method which resulted R. Thus this functional interface
+ * is best used to transforming values and going between types. It can transform the Types of the variables in process.
+ *
+ * The next important note here is called Default Method which is new to Java 8 interfaces and they allow us to change
+ * several functions together. Inside the Functional interface Function doc page (link in the README) we can see there
+ * are several Default Methods which we can add to the code when implementing the Function interface. This default method
+ * does not have to be implemented if we don't need to but if we do we can just add it. For instance the andThen DEfault
+ * method which can make chain of Functions composition.
+ *
+ * Next is Predicate < T > functional interface which represents a predicate (boolean-valued function) of one argument.
+ * it has one abstract method named test(T t) which returns boolean and input T type t argument. Just like Function
+ * functional interface it also has Default methods which one of them kind of chain all Predicate together but in this
+ * functional interface it's called as and(Predicate other) since it represent short-circuiting logical AND operator.
+ * Also there ar or default method for OR operator and of course negate for NOT.
+ *
+ * As described above the predicate has test meaning most likely it will be used to filter values.
+ *
+ * Lastly, the java.uti.function package has some wonderful functional interfaces that useful as we dive deeper into
+ * functional programming. These are 4 basic shapes:
+ *
+ *  - Consumer  -> void accept(T t)     -> useful when we need to process provided value but expect to return nothing
+ *  - Supplier  -> T get()              -> useful when we need something to be initialized
+ *  - Function  -> R apply(T t)         -> useful for transformation both values and types
+ *  - Predicate -> Boolean test(T t)    -> useful for filtering values
+ *
+ * Other remaining functional interfaces in the java.util.function packages are either a typed version of those four or
+ * a version that changes the number of parameters that the functions accepts. The amount of parameters that a function
+ * accepts is referred to as parity. Example bi prefix means two and uni prefix denotes one.
+ *
+ * This completes the Intro to Functional Programming next we will learn more powerful tools called Stream.
  * */
 
 public class Main {

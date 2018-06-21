@@ -22,8 +22,12 @@ NOTE: YOU CAN ALWAYS USE CTRL - Q to find out more on highlighted code.
     1. [static method vs instance method](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/)
 4. Entry 6: Function Shapes
     1. [java.util.function package](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
+5. Entry 7: [Function Shapes - Function and Predicate](https://teamtreehouse.com/library/function-shapes-function-and-predicate)
+    1. [java.util.function package](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
+    2. [Default methods](https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html)
+    3. [java.util.function.Function functional interface](https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)
+    4. [java.util.function.Predicate functional interface](https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html)
     
-
     
 ## Parking Lot of this Course
 Here is some terms that hasn't fully explained:
@@ -32,3 +36,4 @@ Here is some terms that hasn't fully explained:
 3. Higher Order Function
 4. Method Reference Inference
 5. Lazy
+6. Functional Composition
